@@ -1,0 +1,10 @@
+<h1>Articles#list</h1>
+<p>Find me in app/views/articles/list.html.erb</p>
+
+<%= @article.each do |article| %>
+<h1><%= article.title %></h1>
+<p><%= article.content %></p>
+<%= link_to "edit" edit_article_path(article)%>
+<%= link_to "delete" article_path(article) method: :delete %>
+<%= end %>
+
